@@ -1,501 +1,516 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ahmad Mobile Accessories – Your one-stop shop for quality mobile accessories at affordable prices. Top 10 mobile accessories under ₹500 including 20W fast chargers, data cables, earphones, and power banks." />
-  <meta name="keywords" content="Ahmad Mobile Accessories, AMA Multan, mobile accessories, 20W fast charger, data cable, earphones, power bank, phone stand, tempered glass, back cover, pop socket, OTG adapter, under 500" />
-  <meta property="og:title" content="Ahmad Mobile Accessories | Top 10 Mobile Accessories Under ₹500" />
-  <meta property="og:description" content="Your one-stop shop for quality mobile accessories at affordable prices. Fast delivery across Pakistan." />
-  <meta property="og:type" content="website" />
-  <title>Ahmad Mobile Accessories | Quality Mobile Accessories Under ₹500</title>
+  <meta name="description" content="SADIA – Digital Marketing Specialist, SEO Expert, Shopify Developer, Google Ads Expert & Graphic Designer based in Multan, Pakistan." />
+  <meta property="og:title" content="SADIA | Digital Marketing Specialist & Growth Strategist" />
+  <title>SADIA | Digital Marketing Specialist & Growth Strategist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<!-- CUSTOM CURSOR -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- LOADER -->
 <div class="loader" id="loader">
   <div class="loader-inner">
-    <div class="loader-logo-ring">
-      <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories Logo" class="loader-logo-img" />
-    </div>
-    <div class="loader-brand-title">AHMAD MOBILE ACCESSORIES</div>
+    <div class="loader-logo">SADIA</div>
     <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
-    <div class="loader-text" id="loaderText">Loading Store...</div>
+    <div class="loader-text" id="loaderText">Loading Experience...</div>
   </div>
 </div>
-<div class="announcement-bar" id="announcementBar">
-  <div class="container announcement-inner">
-    <div class="ann-left">
-      <span class="ann-item">🔥 <strong>SPECIAL DEAL:</strong> Buy Any 2 Accessories & Get 10% OFF with code <strong>AMA10</strong></span>
-    </div>
-    <div class="ann-right">
-      <a href="tel:03097633492" class="ann-link" id="headerSupportPhone">📞 Support: <strong>03097633492</strong></a>
-      <span class="ann-sep">|</span>
-      <a href="mailto:sadiamarketingagency@gmail.com" class="ann-link" id="headerSupportEmail">✉️ <strong>sadiamarketingagency@gmail.com</strong></a>
-    </div>
-    <button class="ann-close" id="annClose" aria-label="Close Announcement">&times;</button>
-  </div>
-</div>
+
+<!-- PARTICLES BACKGROUND -->
+<canvas class="particles-canvas" id="particlesCanvas"></canvas>
+
+<!-- HEADER -->
 <header class="header" id="header">
   <nav class="nav container">
-    <a href="#home" class="nav-logo" aria-label="Ahmad Mobile Accessories">
-      <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories Logo" class="header-logo-img" />
-      <div class="logo-text-wrap">
-        <span class="logo-brand">AHMAD</span>
-        <span class="logo-sub">MOBILE ACCESSORIES</span>
-      </div>
+    <a href="#home" class="nav-logo">
+      <span class="logo-text">SADIA</span><span class="logo-dot"></span>
     </a>
-    <div class="header-search" id="headerSearch">
-      <input type="text" id="searchInput" placeholder="Search 10 accessories (e.g. Charger, Cable...)" autocomplete="off" aria-label="Search products" />
-      <button class="search-btn" id="searchBtn" aria-label="Search">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      </button>
-      <div class="search-dropdown" id="searchDropdown"></div>
-    </div>
     <ul class="nav-menu" id="navMenu">
-      <li><a href="#home" class="nav-link active" id="navHome">Home</a></li>
-      <li><a href="#products" class="nav-link" id="navProducts">Products</a></li>
-      <li><a href="#categories" class="nav-link" id="navCategories">Categories</a></li>
-      <li><a href="#offers" class="nav-link" id="navOffers">Offers</a></li>
-      <li><a href="#support" class="nav-link" id="navSupport">Support</a></li>
-      <li><a href="#contact" class="nav-link" id="navContact">Contact</a></li>
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+      <li><a href="#pricing" class="nav-link">Pricing</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <button class="icon-btn auth-toggle" id="authToggle" aria-label="Account Login / Sign Up" title="Account Login / Sign Up">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      </button>
-      <button class="icon-btn wishlist-toggle" id="wishlistToggle" aria-label="Wishlist" title="Wishlist">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        <span class="badge" id="wishlistBadge">0</span>
-      </button>
-      <button class="icon-btn cart-toggle" id="cartToggle" aria-label="Shopping Cart" title="Shopping Cart">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <span class="badge" id="cartBadge">0</span>
-      </button>
-      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+      <a href="#contact" class="btn-primary btn-sm">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 </header>
-<div class="modal-overlay" id="authOverlay"></div>
-<div class="auth-modal" id="authModal" role="dialog" aria-label="Account Login or Sign Up">
-  <button class="modal-close" id="authClose" aria-label="Close Account Modal">&times;</button>
-  <div class="auth-box">
-    <div class="auth-header">
-      <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories" class="auth-logo-img" />
-      <h3 id="authTitle">Welcome to Ahmad Mobile Accessories</h3>
-      <div class="auth-tabs">
-        <button class="auth-tab active" id="tabLogin">Login</button>
-        <button class="auth-tab" id="tabSignup">Sign Up</button>
-      </div>
-    </div>
-    <form class="auth-form" id="loginForm">
-      <div class="form-group">
-        <label for="loginEmail">Email Address / Phone</label>
-        <input type="text" id="loginEmail" placeholder="03097633492 or your@email.com" required />
-      </div>
-      <div class="form-group">
-        <label for="loginPassword">Password</label>
-        <input type="password" id="loginPassword" placeholder="••••••••" required />
-      </div>
-      <button type="submit" class="btn-primary btn-glow btn-full">Login to Account</button>
-    </form>
-    <form class="auth-form" id="signupForm" style="display:none;">
-      <div class="form-group">
-        <label for="signupName">Full Name</label>
-        <input type="text" id="signupName" placeholder="Ahmad Ali" required />
-      </div>
-      <div class="form-group">
-        <label for="signupPhone">Phone Number</label>
-        <input type="tel" id="signupPhone" placeholder="03097633492" required />
-      </div>
-      <div class="form-group">
-        <label for="signupEmail">Email Address</label>
-        <input type="email" id="signupEmail" placeholder="sadiamarketingagency@gmail.com" required />
-      </div>
-      <div class="form-group">
-        <label for="signupPassword">Create Password</label>
-        <input type="password" id="signupPassword" placeholder="••••••••" required />
-      </div>
-      <button type="submit" class="btn-primary btn-glow btn-full">Create Free Account</button>
-    </form>
-  </div>
-</div>
-<div class="cart-overlay" id="cartOverlay"></div>
-<aside class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Shopping Cart">
-  <div class="cart-header">
-    <h2>🛒 Your Cart (<span id="cartCountHeader">0</span>)</h2>
-    <button class="cart-close" id="cartClose" aria-label="Close Cart">&times;</button>
-  </div>
-  <div class="cart-items" id="cartItems">
-    <div class="cart-empty" id="cartEmpty">
-      <div class="empty-icon">🛒</div>
-      <p>Your shopping cart is currently empty.</p>
-      <a href="#products" class="btn-primary btn-sm" id="shopNowCartBtn">Browse Products</a>
-    </div>
-  </div>
-  <div class="cart-footer" id="cartFooter" style="display:none;">
-    <div class="cart-total-row"><span>Subtotal:</span><span class="cart-total" id="cartTotal">₹0</span></div>
-    <div class="cart-total-row"><span>Delivery:</span><span class="cart-delivery" id="cartDelivery">FREE</span></div>
-    <div class="cart-total-row total-row"><span>Total:</span><span class="cart-grand-total" id="cartGrandTotal">₹0</span></div>
-    <button class="btn-primary btn-glow btn-full" id="checkoutBtn">Proceed to Checkout</button>
-    <button class="btn-outline btn-full mt-1" id="continueShoppingBtn">Continue Shopping</button>
-  </div>
-</aside>
-<div class="wishlist-overlay" id="wishlistOverlay"></div>
-<aside class="wishlist-drawer" id="wishlistDrawer" role="dialog" aria-label="Saved Wishlist">
-  <div class="cart-header">
-    <h2>❤️ Saved Wishlist</h2>
-    <button class="cart-close" id="wishlistClose" aria-label="Close Wishlist">&times;</button>
-  </div>
-  <div class="cart-items" id="wishlistItems">
-    <div class="cart-empty" id="wishlistEmpty">
-      <div class="empty-icon">🤍</div>
-      <p>Your wishlist is empty. Tap the heart on any product to save it!</p>
-    </div>
-  </div>
-</aside>
-<div class="modal-overlay" id="quickViewOverlay"></div>
-<div class="quick-view-modal" id="quickViewModal" role="dialog" aria-label="Product Quick View">
-  <button class="modal-close" id="quickViewClose" aria-label="Close Quick View">&times;</button>
-  <div class="quick-view-content" id="quickViewContent"></div>
-</div>
-<div class="modal-overlay" id="checkoutOverlay"></div>
-<div class="checkout-modal" id="checkoutModal" role="dialog" aria-label="Checkout Order">
-  <button class="modal-close" id="checkoutClose" aria-label="Close Checkout">&times;</button>
-  <div class="checkout-content">
-    <h2>📦 Complete Your Order</h2>
-    <p class="checkout-sub">Fast Cash on Delivery across Pakistan. Easy & Secure.</p>
-    <form class="checkout-form" id="checkoutForm">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="checkoutName">Full Name *</label>
-          <input type="text" id="checkoutName" placeholder="Ahmad Ali" required />
-        </div>
-        <div class="form-group">
-          <label for="checkoutPhone">Phone Number *</label>
-          <input type="tel" id="checkoutPhone" placeholder="03097633492" required />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="checkoutEmail">Email Address (Optional)</label>
-        <input type="email" id="checkoutEmail" placeholder="sadiamarketingagency@gmail.com" />
-      </div>
-      <div class="form-group">
-        <label for="checkoutAddress">Delivery Address *</label>
-        <textarea id="checkoutAddress" rows="3" placeholder="House #, Street name, Sector / Area" required></textarea>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="checkoutCity">City *</label>
-          <input type="text" id="checkoutCity" placeholder="Multan, Lahore, Karachi..." required />
-        </div>
-        <div class="form-group">
-          <label for="checkoutPayment">Payment Method</label>
-          <select id="checkoutPayment">
-            <option value="cod">💵 Cash on Delivery (COD)</option>
-            <option value="easypaisa">📱 EasyPaisa / JazzCash</option>
-            <option value="bank">🏦 Direct Bank Transfer</option>
-          </select>
-        </div>
-      </div>
-      <div class="order-summary-mini" id="orderSummaryMini"></div>
-      <button type="submit" class="btn-primary btn-glow btn-full" id="placeOrderBtn">
-        <span>✅ Confirm & Place Order (Cash on Delivery)</span>
-      </button>
-    </form>
-  </div>
-</div>
-<div class="modal-overlay" id="successOverlay"></div>
-<div class="success-modal" id="successModal" role="dialog" aria-label="Order Confirmation">
-  <div class="success-icon">🎉</div>
-  <h2>Order Placed Successfully!</h2>
-  <p>Thank you for shopping with <strong>Ahmad Mobile Accessories</strong>!</p>
-  <p>Your order has been placed. We will contact you soon on your phone to verify dispatch details.</p>
-  <div class="success-contact">
-    <a href="tel:03097633492" class="btn-primary btn-sm">📞 Call: 03097633492</a>
-    <a href="mailto:sadiamarketingagency@gmail.com" class="btn-outline btn-sm">✉️ Email Us</a>
-    <a href="https://wa.me/923097633492" target="_blank" class="whatsapp-btn btn-sm">💬 WhatsApp Support</a>
-  </div>
-  <button class="btn-outline mt-1" id="successClose">Continue Shopping</button>
-</div>
+
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg">
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-orb hero-orb-2"></div>
     <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-grid"></div>
   </div>
   <div class="container hero-content">
-    <div class="hero-left reveal-left">
-      <div class="hero-badge">
-        <span class="badge-pulse"></span>
-        <span>TOP 10 MOBILE ACCESSORIES CAMPAIGN</span>
-      </div>
-      <h1 class="hero-title">
-        <span class="hero-brand">AHMAD MOBILE ACCESSORIES</span>
-        <span class="hero-tagline">
-          TOP 10 MOBILE ACCESSORIES
-          <span class="price-highlight">UNDER ₹500</span>
-        </span>
-      </h1>
-      <p class="hero-subtitle">
-        Your one-stop shop for quality mobile accessories at affordable prices. Explore high-speed 20W chargers, heavy-duty data cables, power banks, earphones, and phone stands at unbeatable rates.
-      </p>
-      <div class="hero-chips">
-        <span class="chip">⚡ 20W Fast Charging</span>
-        <span class="chip">🔋 10000mAh Power</span>
-        <span class="chip">🛡️ 9H Screen Glass</span>
-        <span class="chip">🚚 Express Delivery</span>
-      </div>
-      <div class="hero-cta">
-        <a href="#products" class="btn-primary btn-glow" id="heroShopNowBtn">
-          <span>SHOP NOW</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#products" class="btn-outline" id="heroViewAllBtn">
-          <span>VIEW ALL PRODUCTS</span>
-        </a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="stat-num" data-count="10" data-suffix=" Items">0</span>
-          <span class="stat-lbl">Top Rated Items</span>
-        </div>
-        <div class="hero-stat">
-          <span class="stat-num" data-count="500" data-suffix="+">0</span>
-          <span class="stat-lbl">Orders Delivered</span>
-        </div>
-        <div class="hero-stat">
-          <span class="stat-num" data-count="100" data-suffix="%">0</span>
-          <span class="stat-lbl">Genuine Quality</span>
-        </div>
-      </div>
+    <div class="hero-badge reveal-up">
+      <span class="badge-dot"></span>
+      <span>Available for New Projects</span>
     </div>
-    <div class="hero-right reveal-right">
-      <div class="hero-showcase">
-        <div class="hero-logo-wrap">
-          <div class="logo-ring ring-a"></div>
-          <div class="logo-ring ring-b"></div>
-          <div class="logo-ring ring-c"></div>
-          <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories Official Logo" class="hero-logo-img" />
-        </div>
-        <div class="hero-floating-cards">
-          <div class="float-card fc1">⚡ 20W Fast Charger — ₹399</div>
-          <div class="float-card fc2">🔋 10000mAh Power Bank — ₹499</div>
-          <div class="float-card fc3">🎧 Wired Earphones — ₹149</div>
-        </div>
+    <h1 class="hero-title reveal-up">
+      Helping Brands Scale Through
+      <span class="text-gradient">SEO, Shopify</span>
+      &amp; Performance Marketing
+    </h1>
+    <p class="hero-subtitle reveal-up">
+      I help businesses grow online through SEO, Google Ads, Facebook Ads,
+      Shopify Development, Conversion Optimization, and Data-Driven Marketing.
+    </p>
+    <div class="hero-features reveal-up">
+      <span class="feature-chip">&#10003; 5+ Years Experience</span>
+      <span class="feature-chip">&#10003; SEO &amp; Performance Marketing</span>
+      <span class="feature-chip">&#10003; Shopify Expert</span>
+      <span class="feature-chip">&#10003; Google Ads Certified</span>
+      <span class="feature-chip">&#10003; International Client Experience</span>
+    </div>
+    <div class="hero-cta reveal-up">
+      <a href="#contact" class="btn-primary btn-glow" id="bookBtn">
+        <span>Book Free Consultation</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#portfolio" class="btn-outline"><span>View Portfolio</span></a>
+    </div>
+    <div class="hero-stats reveal-up">
+      <div class="stat-card">
+        <div class="stat-number" data-count="100" data-suffix="+">0</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-count="50" data-suffix="+">0</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-count="90" data-suffix="%">0</div>
+        <div class="stat-label">Client Retention</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-count="10" data-suffix="M+">0</div>
+        <div class="stat-label">Marketing Reach</div>
       </div>
     </div>
   </div>
-  <div class="hero-scroll">
-    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
-    <span>Scroll to Explore</span>
+  <div class="hero-scroll-indicator">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span>Scroll Down</span>
   </div>
 </section>
 
+<!-- MARQUEE -->
 <div class="marquee-section">
   <div class="marquee-track">
     <div class="marquee-content">
-      <span>⚡ 20W Fast Charger — ₹399</span><span class="sep">★</span>
-      <span>🔌 Durable Data Cable — ₹149</span><span class="sep">★</span>
-      <span>🎧 Wired Earphones — ₹149</span><span class="sep">★</span>
-      <span>📱 Adjustable Phone Stand — ₹199</span><span class="sep">★</span>
-      <span>🔋 10000mAh Power Bank — ₹499</span><span class="sep">★</span>
-      <span>🚗 Car Mobile Holder — ₹249</span><span class="sep">★</span>
-      <span>🛡️ Tempered Glass — ₹149</span><span class="sep">★</span>
-      <span>💎 Stylish Back Cover — ₹199</span><span class="sep">★</span>
-      <span>🎯 Pop Socket — ₹99</span><span class="sep">★</span>
-      <span>🔗 OTG Adapter — ₹149</span><span class="sep">★</span>
+      <span>SEO Expert</span><span class="sep">&#10022;</span>
+      <span>Shopify Developer</span><span class="sep">&#10022;</span>
+      <span>Google Ads</span><span class="sep">&#10022;</span>
+      <span>Facebook Ads</span><span class="sep">&#10022;</span>
+      <span>Graphic Design</span><span class="sep">&#10022;</span>
+      <span>Content Marketing</span><span class="sep">&#10022;</span>
+      <span>TikTok Marketing</span><span class="sep">&#10022;</span>
+      <span>Branding</span><span class="sep">&#10022;</span>
+      <span>CRO Specialist</span><span class="sep">&#10022;</span>
+      <span>AI Marketing</span><span class="sep">&#10022;</span>
+      <span>Social Media</span><span class="sep">&#10022;</span>
+      <span>SEO Expert</span><span class="sep">&#10022;</span>
+      <span>Shopify Developer</span><span class="sep">&#10022;</span>
+      <span>Google Ads</span><span class="sep">&#10022;</span>
+      <span>Facebook Ads</span><span class="sep">&#10022;</span>
+      <span>Graphic Design</span><span class="sep">&#10022;</span>
+      <span>Content Marketing</span><span class="sep">&#10022;</span>
+      <span>TikTok Marketing</span><span class="sep">&#10022;</span>
+      <span>Branding</span><span class="sep">&#10022;</span>
+      <span>CRO Specialist</span><span class="sep">&#10022;</span>
+      <span>AI Marketing</span><span class="sep">&#10022;</span>
+      <span>Social Media</span><span class="sep">&#10022;</span>
     </div>
   </div>
 </div>
 
-<section class="trust-section" id="offers">
+<!-- ABOUT -->
+<section class="about section" id="about">
   <div class="container">
-    <div class="trust-grid">
-      <div class="trust-card reveal-up">
-        <div class="trust-icon">🚚</div>
-        <h4>Fast Delivery</h4>
-        <p>Swift 2-4 days doorstep delivery across Pakistan</p>
+    <div class="about-grid">
+      <div class="about-image-wrap reveal-left">
+        <div class="about-image-bg"></div>
+        <div class="about-img-container">
+          <img src="assets/sadia-profile.jpg" alt="SADIA Digital Marketing Specialist" class="about-img" />
+        </div>
+        <div class="about-badge-card">
+          <div class="badge-icon">&#127942;</div>
+          <div>
+            <div class="badge-title">Google Certified</div>
+            <div class="badge-sub">Ads &amp; Analytics</div>
+          </div>
+        </div>
+        <div class="about-exp-card">
+          <div class="exp-number">5+</div>
+          <div class="exp-label">Years Experience</div>
+        </div>
       </div>
-      <div class="trust-card reveal-up">
-        <div class="trust-icon">✅</div>
-        <h4>100% Genuine Quality</h4>
-        <p>Every accessory tested for safety and longevity</p>
-      </div>
-      <div class="trust-card reveal-up">
-        <div class="trust-icon">💰</div>
-        <h4>Unbeatable Prices</h4>
-        <p>Top 10 essential mobile accessories under ₹500</p>
-      </div>
-      <div class="trust-card reveal-up">
-        <div class="trust-icon">🔄</div>
-        <h4>7 Days Easy Return</h4>
-        <p>Hassle-free replacement guarantee on all orders</p>
-      </div>
-      <div class="trust-card reveal-up">
-        <div class="trust-icon">📞</div>
-        <h4>Direct Phone Support</h4>
-        <p><a href="tel:03097633492">03097633492</a></p>
+      <div class="about-content reveal-right">
+        <div class="section-badge">About Me</div>
+        <h2 class="section-title">I&#39;m <span class="text-gradient">SADIA</span> &#8212; Digital Growth Expert</h2>
+        <p class="about-location">&#128205; Multan, Pakistan &nbsp;|&nbsp; &#127758; International Experience</p>
+        <p class="about-desc">
+          A creative and versatile digital marketing specialist with extensive expertise in SEO, Google Ads, Facebook Ads, Shopify Development, AI Video Generation, Conversion Rate Optimization, Social Media Marketing, Content Strategy, Graphic Design, and E-commerce Growth.
+        </p>
+        <p class="about-desc">
+          I combine data-driven strategies with creative execution to help brands achieve measurable growth. From startups to established businesses, I craft customized marketing solutions that deliver real ROI.
+        </p>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <span class="skill-name">SEO Strategy</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Google Ads</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Shopify Dev</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Facebook Ads</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Graphic Design</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">AI Video Gen</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
+          </div>
+        </div>
+        <div class="about-timeline">
+          <h3 class="timeline-title">Career Journey</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-year">2019</div>
+                <div class="timeline-role">Started as SEO &amp; Content Specialist</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-year">2020</div>
+                <div class="timeline-role">Expanded to Google Ads &amp; Facebook Ads</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-year">2021</div>
+                <div class="timeline-role">Shopify Development &amp; E-commerce Growth</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-year">2022</div>
+                <div class="timeline-role">AI Video Generation &amp; Graphic Design</div>
+              </div>
+            </div>
+            <div class="timeline-item active">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-year">2024&#8211;Now</div>
+                <div class="timeline-role">Full-Service Digital Marketing Agency</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="products-section section" id="products">
+<!-- SERVICES -->
+<section class="services section" id="services">
   <div class="container">
     <div class="section-header reveal-up">
-      <div class="section-badge">OFFICIAL CATALOG</div>
-      <h2 class="section-title">TOP 10 MOBILE ACCESSORIES <span class="text-gradient">UNDER ₹500</span></h2>
-      <p class="section-subtitle">
-        Curated list of premium quality mobile accessories designed for performance, durability, and extreme affordability.
-      </p>
+      <div class="section-badge">What I Offer</div>
+      <h2 class="section-title">Premium <span class="text-gradient">Services</span></h2>
+      <p class="section-subtitle">End-to-end digital marketing solutions tailored for your brand&#39;s growth</p>
     </div>
-    <div class="products-controls reveal-up">
-      <div class="filter-tabs" id="filterTabs">
-        <button class="filter-tab active" data-filter="all" id="filterAll">All 10 Products</button>
-        <button class="filter-tab" data-filter="charging" id="filterCharging">⚡ Charging</button>
-        <button class="filter-tab" data-filter="audio" id="filterAudio">🎧 Audio</button>
-        <button class="filter-tab" data-filter="protection" id="filterProtection">🛡️ Protection</button>
-        <button class="filter-tab" data-filter="accessories" id="filterAccessories">📱 Accessories</button>
+    <div class="services-grid" id="servicesGrid">
+      <div class="service-card reveal-up">
+        <div class="service-icon-wrap"><div class="service-icon">&#128269;</div></div>
+        <h3>SEO Optimization</h3>
+        <p>Dominate search rankings with technical SEO, on-page optimization, and link building that drives organic traffic.</p>
+        <a href="#contact" class="service-link">Learn More <span>&#8594;</span></a>
+        <div class="service-glow"></div>
       </div>
-      <div class="sort-wrap">
-        <select class="sort-select" id="sortSelect" aria-label="Sort products">
-          <option value="default">Sort By: Featured</option>
-          <option value="price-low">Price: Low to High (₹99 → ₹499)</option>
-          <option value="price-high">Price: High to Low (₹499 → ₹99)</option>
-          <option value="name-az">Name: A to Z</option>
-          <option value="name-za">Name: Z to A</option>
-        </select>
+      <div class="service-card reveal-up">
+        <div class="service-icon-wrap"><div class="service-icon">&#128715;</div></div>
+        <h3>Shopify Development</h3>
+        <p>Custom Shopify stores with premium UI/UX, conversion-optimized layouts, and seamless payment integrations.</p>
+        <a href="#contact" class="service-link">Learn More <span>&#8594;</span></a>
+        <div class="service-glow"></div>
       </div>
-    </div>
-    <div class="products-grid" id="productsGrid"></div>
-    <div class="products-cta reveal-up">
-      <p>Displaying all <span id="productCount">10</span> products from <strong>Ahmad Mobile Accessories</strong></p>
+      <div class="service-card reveal-up">
+        <div class="service-icon-wrap"><div class="service-icon">&#128202;</div></div>
+        <h3>Google Ads Management</h3>
+        <p>Data-driven PPC campaigns with laser-targeted keywords, optimized bids, and maximum ROAS for your budget.</p>
+        <a href="#contact" class="service-link">Learn More <span>&#8594;</span></a>
+        <div class="service-glow"></div>
+      </div>
+      <div class="service-card reveal-up">
+        <div class="service-icon-wrap"><div class="service-icon">&#128241;</div></div>
+        <h3>Facebook Ads Management</h3>
+        <p>Precision-targeted Meta campaigns with compelling creatives that convert cold audiences into loyal customers.</p>
+        <a href="#contact" class="service-link">Learn More <span>&#8594;</span></a>
+        <div class="service-glow"></div>
+      </div>
+      <div class="service-card reveal-up">
+        <div class="service-icon-wrap"><div class="service-icon">&#127925;</div></div>
+        <h3>TikTok Marketing</h3>
+        <p>Viral content strategies and TikTok Ads campaigns that capture Gen-Z audiences and drive massive brand awareness.</p>
+        <a href="#contact" class="service-link">Learn More <span>&#8594;</span></a>
+        <div class="service-glow"></div>
+      </div>
+      <div class="service-card reveal-up">
+        <div class="service-icon-wrap"><div class="service-icon">&#9889;</div></div>
+        <h3>Conversion Rate Optimization</h3>
+        <p>A/B testing, landing page optimization, and UX improvements that turn more visitors into paying customers.</p>
+        <a href="#contact" class="service-link">Learn More <span>&#8594;</span></a>
+        <div class="service-glow"></div>
+      </div>
+      <div class="service-card reveal-up">
+        <div class="service-icon-wrap"><div class="service-icon">&#128640;</div></div>
+        <h3>Website Speed Optimization</h3>
+        <p>Achieve 90+ PageSpeed scores with technical optimization, CDN setup, and Core Web Vitals improvements.</p>
+        <a href="#contact" class="service-link">Learn More <span>&#8594;</span></a>
+        <div class="service-glow"></div>
+      </div>
+      <div class="service-card reveal-up">
+        <div class="service-icon-wrap"><div class="service-icon">&#127912;</div></div>
+        <h3>Graphic Design</h3>
+        <p>Eye-catching visuals, social media graphics, and brand assets that communicate your unique value proposition.</p>
+        <a href="#contact" class="service-link">Learn More <span>&#8594;</span></a>
+        <div class="service-glow"></div>
+      </div>
+      <div class="service-card reveal-up">
+        <div class="service-icon-wrap"><div class="service-icon">&#128142;</div></div>
+        <h3>Branding</h3>
+        <p>Complete brand identity creation including logo design, color palette, typography, and brand guidelines.</p>
+        <a href="#contact" class="service-link">Learn More <span>&#8594;</span></a>
+        <div class="service-glow"></div>
+      </div>
+      <div class="service-card reveal-up">
+        <div class="service-icon-wrap"><div class="service-icon">&#128200;</div></div>
+        <h3>Social Media Management</h3>
+        <p>Full-service social media management with content creation, scheduling, and community engagement strategies.</p>
+        <a href="#contact" class="service-link">Learn More <span>&#8594;</span></a>
+        <div class="service-glow"></div>
+      </div>
+      <div class="service-card reveal-up">
+        <div class="service-icon-wrap"><div class="service-icon">&#9999;&#65039;</div></div>
+        <h3>Content Marketing</h3>
+        <p>Strategic content that builds authority, drives organic traffic, and nurtures leads through the buyer&#39;s journey.</p>
+        <a href="#contact" class="service-link">Learn More <span>&#8594;</span></a>
+        <div class="service-glow"></div>
+      </div>
+      <div class="service-card reveal-up">
+        <div class="service-icon-wrap"><div class="service-icon">&#129302;</div></div>
+        <h3>Marketing Automation</h3>
+        <p>Smart automation workflows that nurture leads, recover abandoned carts, and maximize customer lifetime value.</p>
+        <a href="#contact" class="service-link">Learn More <span>&#8594;</span></a>
+        <div class="service-glow"></div>
+      </div>
     </div>
   </div>
 </section>
-<section class="categories-section section" id="categories">
+
+<!-- PORTFOLIO -->
+<section class="portfolio section" id="portfolio">
   <div class="container">
     <div class="section-header reveal-up">
-      <div class="section-badge">SHOP BY CATEGORY</div>
-      <h2 class="section-title">Explore Accessories <span class="text-gradient">By Category</span></h2>
-      <p class="section-subtitle">Find exactly what your mobile device needs in one tap</p>
+      <div class="section-badge">My Work</div>
+      <h2 class="section-title">Featured <span class="text-gradient">Portfolio</span></h2>
+      <p class="section-subtitle">Real results from real campaigns &#8212; proof that strategy beats luck</p>
     </div>
-    <div class="categories-grid reveal-up">
-      <div class="cat-card" data-cat="charging" id="catCharging">
-        <div class="cat-icon">⚡</div>
-        <h4>Charging & Power</h4>
-        <p>20W Charger, Cable, Power Bank</p>
+    <div class="portfolio-filters reveal-up">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="seo">SEO</button>
+      <button class="filter-btn" data-filter="shopify">Shopify</button>
+      <button class="filter-btn" data-filter="google">Google Ads</button>
+      <button class="filter-btn" data-filter="facebook">Facebook Ads</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+    <div class="portfolio-grid" id="portfolioGrid">
+      <div class="portfolio-card" data-category="seo">
+        <div class="portfolio-img">
+          <div class="port-placeholder p-seo">
+            <span>&#128269;</span>
+            <div class="port-results"><span>+320% Traffic</span><span>Page 1 Rankings</span></div>
+          </div>
+          <div class="portfolio-overlay"><a href="#" class="view-case-btn">View Case Study</a></div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-category-tag">SEO Project</div>
+          <h3>E-commerce SEO Transformation</h3>
+          <div class="port-industry">&#127991;&#65039; Fashion &amp; Apparel</div>
+          <div class="port-kpis"><span>+320% Traffic</span><span>4.2x ROAS</span><span>68% Revenue</span></div>
+        </div>
       </div>
-      <div class="cat-card" data-cat="audio" id="catAudio">
-        <div class="cat-icon">🎧</div>
-        <h4>Audio & Sound</h4>
-        <p>Clear Mic Wired Earphones</p>
+      <div class="portfolio-card" data-category="shopify">
+        <div class="portfolio-img">
+          <div class="port-placeholder p-shopify">
+            <span>&#128715;</span>
+            <div class="port-results"><span>+85% CVR</span><span>$50K/Month</span></div>
+          </div>
+          <div class="portfolio-overlay"><a href="#" class="view-case-btn">View Case Study</a></div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-category-tag">Shopify Project</div>
+          <h3>Luxury Beauty Store Launch</h3>
+          <div class="port-industry">&#127991;&#65039; Beauty &amp; Skincare</div>
+          <div class="port-kpis"><span>+85% CVR</span><span>$50K/mo</span><span>5&#9733; Store</span></div>
+        </div>
       </div>
-      <div class="cat-card" data-cat="protection" id="catProtection">
-        <div class="cat-icon">🛡️</div>
-        <h4>Device Protection</h4>
-        <p>9H Glass, Stylish Back Covers</p>
+      <div class="portfolio-card" data-category="google">
+        <div class="portfolio-img">
+          <div class="port-placeholder p-google">
+            <span>&#128202;</span>
+            <div class="port-results"><span>6.8x ROAS</span><span>-42% CPA</span></div>
+          </div>
+          <div class="portfolio-overlay"><a href="#" class="view-case-btn">View Case Study</a></div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-category-tag">Google Ads</div>
+          <h3>Real Estate Lead Generation</h3>
+          <div class="port-industry">&#127991;&#65039; Real Estate</div>
+          <div class="port-kpis"><span>6.8x ROAS</span><span>200+ Leads</span><span>-42% CPA</span></div>
+        </div>
       </div>
-      <div class="cat-card" data-cat="accessories" id="catAccessories">
-        <div class="cat-icon">📱</div>
-        <h4>Mounts & Utility</h4>
-        <p>Car Mounts, Desk Stands, OTG, Pops</p>
+      <div class="portfolio-card" data-category="facebook">
+        <div class="portfolio-img">
+          <div class="port-placeholder p-facebook">
+            <span>&#128241;</span>
+            <div class="port-results"><span>5.2x ROAS</span><span>1M+ Reach</span></div>
+          </div>
+          <div class="portfolio-overlay"><a href="#" class="view-case-btn">View Case Study</a></div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-category-tag">Facebook Ads</div>
+          <h3>Health Supplement Scale-Up</h3>
+          <div class="port-industry">&#127991;&#65039; Health &amp; Wellness</div>
+          <div class="port-kpis"><span>5.2x ROAS</span><span>1M+ Reach</span><span>+210% Sales</span></div>
+        </div>
+      </div>
+      <div class="portfolio-card" data-category="design">
+        <div class="portfolio-img">
+          <div class="port-placeholder p-design">
+            <span>&#127912;</span>
+            <div class="port-results"><span>Complete Rebrand</span><span>+60% Brand Recall</span></div>
+          </div>
+          <div class="portfolio-overlay"><a href="#" class="view-case-btn">View Case Study</a></div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-category-tag">Branding &amp; Design</div>
+          <h3>Tech Startup Brand Identity</h3>
+          <div class="port-industry">&#127991;&#65039; Technology</div>
+          <div class="port-kpis"><span>Full Brand</span><span>+60% Recall</span><span>Premium Look</span></div>
+        </div>
+      </div>
+      <div class="portfolio-card" data-category="seo">
+        <div class="portfolio-img">
+          <div class="port-placeholder p-seo2">
+            <span>&#128221;</span>
+            <div class="port-results"><span>+480% Traffic</span><span>50 P1 Keywords</span></div>
+          </div>
+          <div class="portfolio-overlay"><a href="#" class="view-case-btn">View Case Study</a></div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-category-tag">SEO Project</div>
+          <h3>SaaS Content SEO Strategy</h3>
+          <div class="port-industry">&#127991;&#65039; Software / SaaS</div>
+          <div class="port-kpis"><span>+480% Traffic</span><span>50 P1 KWs</span><span>+180% Leads</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="offer-banner">
-  <div class="container">
-    <div class="offer-content reveal-up">
-      <div class="offer-badge">🔥 EXCLUSIVE PROMOTION</div>
-      <h2>Upgrade Your Phone Kit & Save 10%!</h2>
-      <p>Add any 2 or more accessories to your cart and apply coupon code <strong>AMA10</strong> at checkout.</p>
-      <a href="#products" class="btn-primary btn-glow" id="offerShopBtn">
-        <span>SHOP NOW & SAVE</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-    <div class="offer-visual">
-      <div class="offer-logo-wrap">
-        <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories Logo" class="offer-logo" />
-      </div>
-      <div class="offer-stats">
-        <div class="offer-stat"><span>10%</span><small>DISCOUNT</small></div>
-        <div class="offer-stat"><span>₹499</span><small>MAX PRICE</small></div>
-        <div class="offer-stat"><span>FREE</span><small>DELIVERY</small></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="why-section section" id="support">
+<!-- WHY CHOOSE ME -->
+<section class="why-me section" id="whyMe">
   <div class="container">
     <div class="why-grid">
       <div class="why-content reveal-left">
-        <div class="section-badge">WHY AHMAD MOBILE ACCESSORIES?</div>
-        <h2 class="section-title">Why Shop With <span class="text-gradient">Ahmad Mobile Accessories?</span></h2>
-        <p class="section-subtitle-left">
-          We combine factory-direct pricing with strict quality standards to deliver high quality mobile accessories without the premium markup.
-        </p>
+        <div class="section-badge">Why Me</div>
+        <h2 class="section-title">Why Choose <span class="text-gradient">SADIA?</span></h2>
+        <p class="section-subtitle-left">I don&#39;t just run campaigns &#8212; I build growth systems that compound over time.</p>
         <div class="why-list">
           <div class="why-item">
-            <div class="why-check">✓</div>
-            <div>
-              <h4>Strict Quality Testing</h4>
-              <p>Every fast charger, power bank, and cable is heat and voltage safety tested.</p>
-            </div>
+            <div class="why-check">&#10003;</div>
+            <div><h4>Data-Driven Strategy</h4><p>Every decision backed by analytics, not guesswork</p></div>
           </div>
           <div class="why-item">
-            <div class="why-check">✓</div>
-            <div>
-              <h4>All Products Under ₹500</h4>
-              <p>Guaranteed best market pricing with items starting from just ₹99.</p>
-            </div>
+            <div class="why-check">&#10003;</div>
+            <div><h4>Transparent Reporting</h4><p>Weekly reports with clear ROI metrics you can understand</p></div>
           </div>
           <div class="why-item">
-            <div class="why-check">✓</div>
-            <div>
-              <h4>24/7 Dedicated Customer Support</h4>
-              <p>Direct contact with our team via Phone: <a href="tel:03097633492">03097633492</a> & Email: <a href="mailto:sadiamarketingagency@gmail.com">sadiamarketingagency@gmail.com</a>.</p>
-            </div>
+            <div class="why-check">&#10003;</div>
+            <div><h4>Fast Communication</h4><p>24-hour response time, always reachable when you need me</p></div>
           </div>
           <div class="why-item">
-            <div class="why-check">✓</div>
-            <div>
-              <h4>Cash On Delivery Everywhere</h4>
-              <p>Pay comfortably in cash at your doorstep once your package arrives.</p>
-            </div>
+            <div class="why-check">&#10003;</div>
+            <div><h4>ROI-Focused Marketing</h4><p>Your revenue growth is my primary success metric</p></div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">&#10003;</div>
+            <div><h4>Custom Growth Plans</h4><p>No cookie-cutter strategies &#8212; tailored to your industry</p></div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">&#10003;</div>
+            <div><h4>International Experience</h4><p>Clients across US, UK, UAE, Europe and more</p></div>
           </div>
         </div>
       </div>
-
       <div class="why-visual reveal-right">
         <div class="why-card-stack">
           <div class="floating-card card-1">
-            <div class="card-icon">⭐</div>
-            <div class="card-text">500+ Happy Customers</div>
-            <div class="card-sub">Trusted by phone users</div>
+            <div class="card-icon">&#128200;</div>
+            <div class="card-text">320% Traffic Growth</div>
+            <div class="card-sub">in 6 months</div>
           </div>
           <div class="floating-card card-2">
-            <div class="card-icon">⚡</div>
-            <div class="card-text">Under ₹500 Guarantee</div>
-            <div class="card-sub">Affordable tech accessories</div>
+            <div class="card-icon">&#128176;</div>
+            <div class="card-text">6.8x Average ROAS</div>
+            <div class="card-sub">Google Ads campaigns</div>
           </div>
           <div class="floating-card card-3">
-            <div class="card-icon">🔄</div>
-            <div class="card-text">7-Day Free Replacement</div>
-            <div class="card-sub">100% Peace of mind</div>
+            <div class="card-icon">&#11088;</div>
+            <div class="card-text">90% Client Retention</div>
+            <div class="card-sub">because results speak</div>
           </div>
-          <div class="why-center-logo">
-            <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories" class="why-logo-img" />
+          <div class="why-center-graphic">
+            <div class="why-ring ring-1"></div>
+            <div class="why-ring ring-2"></div>
+            <div class="why-ring ring-3"></div>
+            <div class="why-core"><span>SADIA</span></div>
           </div>
         </div>
       </div>
@@ -503,229 +518,357 @@
   </div>
 </section>
 
+<!-- TOOLS -->
+<section class="tools section" id="tools">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-badge">My Arsenal</div>
+      <h2 class="section-title">Tools &amp; <span class="text-gradient">Certifications</span></h2>
+    </div>
+    <div class="tools-grid reveal-up">
+      <div class="tool-item"><div class="tool-icon tool-g">G</div><span>Google Ads</span></div>
+      <div class="tool-item"><div class="tool-icon tool-ga">GA</div><span>Google Analytics</span></div>
+      <div class="tool-item"><div class="tool-icon tool-sh">S</div><span>Shopify</span></div>
+      <div class="tool-item"><div class="tool-icon tool-fb">f</div><span>Meta Ads</span></div>
+      <div class="tool-item"><div class="tool-icon tool-gtm">GTM</div><span>Tag Manager</span></div>
+      <div class="tool-item"><div class="tool-icon tool-sem">SEM</div><span>SEMrush</span></div>
+      <div class="tool-item"><div class="tool-icon tool-ah">AH</div><span>Ahrefs</span></div>
+      <div class="tool-item"><div class="tool-icon tool-wp">W</div><span>WordPress</span></div>
+      <div class="tool-item"><div class="tool-icon tool-ai">AI</div><span>AI Video Gen</span></div>
+      <div class="tool-item"><div class="tool-icon tool-ca">C</div><span>Canva Pro</span></div>
+      <div class="tool-item"><div class="tool-icon tool-kl">K</div><span>Klaviyo</span></div>
+      <div class="tool-item"><div class="tool-icon tool-tt">TT</div><span>TikTok Ads</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
 <section class="testimonials section" id="testimonials">
   <div class="container">
     <div class="section-header reveal-up">
-      <div class="section-badge">CUSTOMER FEEDBACK</div>
-      <h2 class="section-title">What Buyers Say About <span class="text-gradient">Our Accessories</span></h2>
-      <p class="section-subtitle">Real verified customer reviews for Ahmad Mobile Accessories</p>
+      <div class="section-badge">Client Love</div>
+      <h2 class="section-title">What Clients <span class="text-gradient">Say</span></h2>
+      <p class="section-subtitle">Real feedback from real businesses that grew with SADIA</p>
     </div>
     <div class="testimonials-wrapper reveal-up">
       <div class="testimonial-track" id="testimonialTrack">
         <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"The 20W Fast Charger is fantastic! It charges my smartphone from 10% to 70% in under 35 minutes. Outstanding value for only ₹399!"</p>
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"SADIA completely transformed our online presence. Our organic traffic grew by 320% in just 6 months and our revenue doubled. She&#39;s not just a marketer &#8212; she&#39;s a growth partner."</p>
           <div class="testimonial-author">
-            <div class="author-avatar av-blue">AR</div>
-            <div><div class="author-name">Ali Raza</div><div class="author-company">Multan, Pakistan</div></div>
+            <div class="author-avatar">AK</div>
+            <div><div class="author-name">Ahmed Khan</div><div class="author-company">CEO, FashionHub Pakistan</div></div>
           </div>
         </div>
         <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"The 10000mAh Power Bank for ₹499 is the best purchase I made this year. High build quality, charges two devices simultaneously!"</p>
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"We launched our Shopify store with SADIA and hit $50K in the first month. The store design is stunning and Google Ads campaigns have a consistent 6x ROAS."</p>
           <div class="testimonial-author">
-            <div class="author-avatar av-gold">FA</div>
-            <div><div class="author-name">Fatima Ahmad</div><div class="author-company">Lahore, Pakistan</div></div>
+            <div class="author-avatar">SM</div>
+            <div><div class="author-name">Sara Mitchell</div><div class="author-company">Founder, GlowBeauty USA</div></div>
           </div>
         </div>
         <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"Super fast delivery! The braided data cable and tempered glass arrived within 2 days in perfect packaging. Highly recommended store."</p>
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Best investment we&#39;ve ever made. SADIA&#39;s Facebook Ads strategy took us from $10K to $60K monthly revenue in just 2 months. Her communication and reporting are top-notch."</p>
           <div class="testimonial-author">
-            <div class="author-avatar av-blue">UH</div>
-            <div><div class="author-name">Usman Haider</div><div class="author-company">Karachi, Pakistan</div></div>
+            <div class="author-avatar">JL</div>
+            <div><div class="author-name">James Li</div><div class="author-company">Founder, VitaBoost UK</div></div>
           </div>
         </div>
         <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"The adjustable phone stand and pop socket make video calls and Netflix so much easier. Excellent customer service from Ahmad Mobile Accessories."</p>
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"SADIA redesigned our brand from scratch. The new logo and marketing materials are absolutely premium. Our brand recognition increased 60% within 3 months."</p>
           <div class="testimonial-author">
-            <div class="author-avatar av-gold">ZK</div>
-            <div><div class="author-name">Zainab Khan</div><div class="author-company">Faisalabad, Pakistan</div></div>
+            <div class="author-avatar">RN</div>
+            <div><div class="author-name">Rania Nour</div><div class="author-company">Director, TechNova UAE</div></div>
           </div>
         </div>
         <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"Wired earphones have deep bass and crystal clear mic audio during phone calls. Great pricing and genuine products."</p>
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Professional, creative, and results-driven. SADIA managed our entire social media presence and within 4 months we went from 2K to 45K followers with real engagement."</p>
           <div class="testimonial-author">
-            <div class="author-avatar av-blue">MS</div>
-            <div><div class="author-name">Muhammad Saleem</div><div class="author-company">Rawalpindi, Pakistan</div></div>
+            <div class="author-avatar">MH</div>
+            <div><div class="author-name">Maria Hassan</div><div class="author-company">Owner, OrganicEats Canada</div></div>
           </div>
         </div>
       </div>
       <div class="slider-controls">
-        <button class="slider-btn" id="prevBtn" aria-label="Previous Review">&#8249;</button>
+        <button class="slider-btn" id="prevBtn">&#8249;</button>
         <div class="slider-dots" id="sliderDots"></div>
-        <button class="slider-btn" id="nextBtn" aria-label="Next Review">&#8250;</button>
+        <button class="slider-btn" id="nextBtn">&#8250;</button>
       </div>
     </div>
   </div>
 </section>
 
-<section class="newsletter-section">
+<!-- PRICING -->
+<section class="pricing section" id="pricing">
   <div class="container">
-    <div class="newsletter-box reveal-up">
-      <div class="newsletter-content">
-        <h3>📩 Subscribe for Exclusive Discounts & New Arrivals</h3>
-        <p>Get notified first about new accessories under ₹500 and seasonal discount vouchers!</p>
+    <div class="section-header reveal-up">
+      <div class="section-badge">Investment</div>
+      <h2 class="section-title">Transparent <span class="text-gradient">Pricing</span></h2>
+      <p class="section-subtitle">Choose a plan that fits your business goals &#8212; upgrade anytime</p>
+    </div>
+    <div class="pricing-grid reveal-up">
+      <div class="pricing-card">
+        <div class="pricing-tag">Starter</div>
+        <div class="pricing-price">
+          <span class="price-currency">$</span>
+          <span class="price-amount">499</span>
+          <span class="price-period">/month</span>
+        </div>
+        <p class="pricing-desc">Perfect for small businesses just getting started online</p>
+        <ul class="pricing-features">
+          <li>&#10003; SEO Audit &amp; Strategy</li>
+          <li>&#10003; 5 Blog Articles/Month</li>
+          <li>&#10003; Social Media (3 platforms)</li>
+          <li>&#10003; Monthly Report</li>
+          <li>&#10003; Email Support</li>
+          <li class="disabled">&#10007; Google/Facebook Ads</li>
+          <li class="disabled">&#10007; Shopify Development</li>
+        </ul>
+        <a href="#contact" class="btn-outline pricing-cta">Get Started</a>
       </div>
-      <form class="newsletter-form" id="newsletterForm">
-        <input type="email" id="newsletterEmail" placeholder="Enter your email (e.g. sadiamarketingagency@gmail.com)" required />
-        <button type="submit" class="btn-primary btn-glow" id="newsletterSubmitBtn">Subscribe</button>
-      </form>
+      <div class="pricing-card pricing-popular">
+        <div class="popular-badge">Most Popular</div>
+        <div class="pricing-tag">Growth</div>
+        <div class="pricing-price">
+          <span class="price-currency">$</span>
+          <span class="price-amount">999</span>
+          <span class="price-period">/month</span>
+        </div>
+        <p class="pricing-desc">For growing businesses ready to scale with paid advertising</p>
+        <ul class="pricing-features">
+          <li>&#10003; Full SEO Management</li>
+          <li>&#10003; 10 Blog Articles/Month</li>
+          <li>&#10003; Google Ads Management</li>
+          <li>&#10003; Facebook Ads Management</li>
+          <li>&#10003; Social Media (5 platforms)</li>
+          <li>&#10003; Bi-Weekly Reports</li>
+          <li>&#10003; WhatsApp Support</li>
+        </ul>
+        <a href="#contact" class="btn-primary pricing-cta btn-glow">Get Started</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tag">Premium</div>
+        <div class="pricing-price">
+          <span class="price-currency">$</span>
+          <span class="price-amount">1,999</span>
+          <span class="price-period">/month</span>
+        </div>
+        <p class="pricing-desc">Complete done-for-you marketing system for serious growth</p>
+        <ul class="pricing-features">
+          <li>&#10003; Everything in Growth</li>
+          <li>&#10003; Shopify Development</li>
+          <li>&#10003; CRO &amp; Landing Pages</li>
+          <li>&#10003; TikTok Marketing</li>
+          <li>&#10003; Unlimited Graphic Design</li>
+          <li>&#10003; Weekly Dashboard Reports</li>
+          <li>&#10003; 24/7 Priority Support</li>
+        </ul>
+        <a href="#contact" class="btn-outline pricing-cta">Get Started</a>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- BLOG -->
+<section class="blog section" id="blog">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-badge">Knowledge Hub</div>
+      <h2 class="section-title">Latest <span class="text-gradient">Insights</span></h2>
+      <p class="section-subtitle">Free marketing knowledge to grow your business</p>
+    </div>
+    <div class="blog-grid reveal-up">
+      <div class="blog-card">
+        <div class="blog-cat-tag seo-tag">SEO</div>
+        <div class="blog-img-ph b-seo"><span>&#128269;</span></div>
+        <div class="blog-content">
+          <div class="blog-meta">Aug 2024 &bull; 8 min read</div>
+          <h3>10 SEO Strategies That Will Dominate Google in 2025</h3>
+          <p>Discover the cutting-edge SEO tactics that top marketers are using to claim page 1 rankings and drive exponential organic growth...</p>
+          <a href="#" class="blog-link">Read Article &#8594;</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-cat-tag google-tag">Google Ads</div>
+        <div class="blog-img-ph b-google"><span>&#128202;</span></div>
+        <div class="blog-content">
+          <div class="blog-meta">Jul 2024 &bull; 6 min read</div>
+          <h3>How to Achieve 5x ROAS With Google Performance Max</h3>
+          <p>Performance Max campaigns have changed PPC advertising forever. Here&#39;s how to maximize them for your business...</p>
+          <a href="#" class="blog-link">Read Article &#8594;</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-cat-tag shopify-tag">Shopify</div>
+        <div class="blog-img-ph b-shopify"><span>&#128715;</span></div>
+        <div class="blog-content">
+          <div class="blog-meta">Jun 2024 &bull; 10 min read</div>
+          <h3>Shopify Store Optimization: 15 CRO Hacks That Boost Sales</h3>
+          <p>Most Shopify stores convert at 1-2%. With these optimizations, you can push conversion rates to 4-6%...</p>
+          <a href="#" class="blog-link">Read Article &#8594;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section class="contact section" id="contact">
   <div class="container">
     <div class="section-header reveal-up">
-      <div class="section-badge">CUSTOMER SUPPORT & INQUIRIES</div>
-      <h2 class="section-title">Contact <span class="text-gradient">Ahmad Mobile Accessories</span></h2>
-      <p class="section-subtitle">We are here to assist with product inquiries, bulk orders, and tracking updates.</p>
+      <div class="section-badge">Let&#39;s Talk</div>
+      <h2 class="section-title">Start Your <span class="text-gradient">Growth Journey</span></h2>
+      <p class="section-subtitle">Book a free strategy call and let&#39;s discuss how to scale your business</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info reveal-left">
-        <div class="contact-logo-wrap">
-          <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories Logo" class="contact-logo-img" />
-        </div>
-        <h3>AHMAD MOBILE ACCESSORIES</h3>
-        <p class="contact-tagline">“Your one-stop shop for quality mobile accessories at affordable prices.”</p>
-        
+        <h3>Get In Touch</h3>
         <div class="contact-details">
           <div class="contact-item">
-            <div class="contact-icon">📞</div>
+            <div class="contact-icon">&#128231;</div>
             <div>
-              <div class="contact-label">Phone / WhatsApp Support</div>
-              <a href="tel:03097633492" class="contact-value" id="contactPhoneLink">03097633492</a>
+              <div class="contact-label">Email</div>
+              <a href="mailto:sadiamarketingagency@gmail.com" class="contact-value">sadiamarketingagency@gmail.com</a>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">✉️</div>
+            <div class="contact-icon">&#128222;</div>
             <div>
-              <div class="contact-label">Official Email</div>
-              <a href="mailto:sadiamarketingagency@gmail.com" class="contact-value" id="contactEmailLink">sadiamarketingagency@gmail.com</a>
+              <div class="contact-label">Phone / WhatsApp</div>
+              <a href="tel:+923097633492" class="contact-value">+92 309 7633492</a>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">📍</div>
+            <div class="contact-icon">&#128205;</div>
             <div>
-              <div class="contact-label">Store Location</div>
+              <div class="contact-label">Location</div>
               <span class="contact-value">Multan, Punjab, Pakistan</span>
             </div>
           </div>
         </div>
-
         <div class="contact-ctas">
-          <a href="https://wa.me/923097633492" target="_blank" class="whatsapp-btn" id="contactWhatsAppBtn">💬 Chat on WhatsApp</a>
-          <a href="tel:03097633492" class="call-btn" id="contactCallBtn">📞 Call 03097633492</a>
+          <a href="https://wa.me/923097633492" target="_blank" class="whatsapp-btn">&#128172; Chat on WhatsApp</a>
+          <a href="mailto:sadiamarketingagency@gmail.com" class="calendly-btn">&#128197; Book a Strategy Call</a>
+        </div>
+        <div class="social-links-contact">
+          <h4>Follow Me</h4>
+          <div class="social-icons-row">
+            <a href="#" class="social-icon-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-icon-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-icon-link" aria-label="Instagram">ig</a>
+            <a href="#" class="social-icon-link" aria-label="TikTok">tk</a>
+            <a href="#" class="social-icon-link" aria-label="YouTube">yt</a>
+          </div>
         </div>
       </div>
-
       <div class="contact-form-wrap reveal-right">
         <form class="contact-form" id="contactForm">
           <div class="form-row">
             <div class="form-group">
-              <label for="contactName">Your Full Name *</label>
-              <input type="text" id="contactName" placeholder="Ahmad Ali" required />
+              <label for="contactName">Your Name</label>
+              <input type="text" id="contactName" placeholder="John Smith" required />
             </div>
             <div class="form-group">
-              <label for="contactUserPhone">Phone Number *</label>
-              <input type="tel" id="contactUserPhone" placeholder="03097633492" required />
+              <label for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" placeholder="john@company.com" required />
             </div>
           </div>
           <div class="form-group">
-            <label for="contactUserEmail">Email Address</label>
-            <input type="email" id="contactUserEmail" placeholder="sadiamarketingagency@gmail.com" />
-          </div>
-          <div class="form-group">
-            <label for="contactSubject">Subject</label>
-            <select id="contactSubject">
-              <option value="inquiry">General Product Inquiry</option>
-              <option value="order">Order Status & Tracking</option>
-              <option value="bulk">Bulk / Wholesale Order</option>
-              <option value="return">Return & Exchange</option>
+            <label for="contactService">Service Interested In</label>
+            <select id="contactService">
+              <option value="">Select a service...</option>
+              <option>SEO Optimization</option>
+              <option>Shopify Development</option>
+              <option>Google Ads Management</option>
+              <option>Facebook Ads Management</option>
+              <option>Full Digital Marketing Package</option>
+              <option>Graphic Design &amp; Branding</option>
+              <option>Other</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="contactMessage">Your Message *</label>
-            <textarea id="contactMessage" rows="4" placeholder="How can we assist you with our accessories?" required></textarea>
+            <label for="contactBudget">Monthly Budget</label>
+            <select id="contactBudget">
+              <option value="">Select budget range...</option>
+              <option>$500 - $1,000</option>
+              <option>$1,000 - $2,500</option>
+              <option>$2,500 - $5,000</option>
+              <option>$5,000+</option>
+            </select>
           </div>
-          <button type="submit" class="btn-primary btn-glow btn-full" id="contactSubmitBtn">
-            <span>Send Message 📩</span>
+          <div class="form-group">
+            <label for="contactMessage">Tell Me About Your Project</label>
+            <textarea id="contactMessage" rows="5" placeholder="Describe your business goals, current challenges, and what you want to achieve..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-glow btn-full" id="submitBtn">
+            <span>Send Message &amp; Book Free Call</span>
           </button>
+          <p class="form-disclaimer">&#128274; Your information is 100% private. No spam, ever.</p>
         </form>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer" id="footer">
   <div class="footer-glow"></div>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo-wrap">
-          <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories Logo" class="footer-logo-img" />
-          <div class="footer-logo-text">
-            <span class="footer-brand-name">AHMAD MOBILE ACCESSORIES</span>
-          </div>
+        <div class="footer-logo">SADIA<span class="logo-dot"></span></div>
+        <p>Digital Marketing Specialist &amp; Growth Strategist helping brands scale globally.</p>
+        <div class="footer-social">
+          <a href="#" class="fsoc" aria-label="LinkedIn">in</a>
+          <a href="#" class="fsoc" aria-label="Facebook">f</a>
+          <a href="#" class="fsoc" aria-label="Instagram">ig</a>
+          <a href="#" class="fsoc" aria-label="TikTok">tk</a>
+          <a href="#" class="fsoc" aria-label="YouTube">yt</a>
         </div>
-        <p class="footer-mission">“Your one-stop shop for quality mobile accessories at affordable prices.”</p>
-        <div class="footer-contact-block">
-          <p><strong>Contact:</strong></p>
-          <p>📞 Phone: <a href="tel:03097633492" class="footer-link-highlight">03097633492</a></p>
-          <p>✉️ Email: <a href="mailto:sadiamarketingagency@gmail.com" class="footer-link-highlight">sadiamarketingagency@gmail.com</a></p>
-        </div>
-        <a href="https://wa.me/923097633492" target="_blank" class="footer-wa-btn">💬 Instant WhatsApp Order</a>
       </div>
-
       <div class="footer-col">
-        <h4>Top 10 Products</h4>
+        <h4>Services</h4>
         <ul>
-          <li><a href="#products">1. 20W Fast Charger (₹399)</a></li>
-          <li><a href="#products">2. Durable Data Cable (₹149)</a></li>
-          <li><a href="#products">3. Wired Earphones (₹149)</a></li>
-          <li><a href="#products">4. Adjustable Phone Stand (₹199)</a></li>
-          <li><a href="#products">5. 10000mAh Power Bank (₹499)</a></li>
+          <li><a href="#services">SEO Optimization</a></li>
+          <li><a href="#services">Shopify Development</a></li>
+          <li><a href="#services">Google Ads</a></li>
+          <li><a href="#services">Facebook Ads</a></li>
+          <li><a href="#services">Graphic Design</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
-        <h4>More Accessories</h4>
+        <h4>Company</h4>
         <ul>
-          <li><a href="#products">6. Car Mobile Holder (₹249)</a></li>
-          <li><a href="#products">7. Tempered Glass (₹149)</a></li>
-          <li><a href="#products">8. Stylish Back Cover (₹199)</a></li>
-          <li><a href="#products">9. Pop Socket (₹99)</a></li>
-          <li><a href="#products">10. OTG Adapter (₹149)</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
-        <h4>Customer Support</h4>
+        <h4>Contact</h4>
         <ul>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a href="#offers">Offers & Promotions</a></li>
-          <li><a href="#support">Why Choose AMA</a></li>
-          <li><a href="tel:03097633492">Helpline: 03097633492</a></li>
-          <li><a href="mailto:sadiamarketingagency@gmail.com">sadiamarketingagency@gmail.com</a></li>
+          <li>&#128231; sadiamarketingagency@gmail.com</li>
+          <li>&#128222; +92 309 7633492</li>
+          <li>&#128205; Multan, Pakistan</li>
         </ul>
+        <a href="https://wa.me/923097633492" class="footer-wa-btn" target="_blank">&#128172; WhatsApp Me</a>
       </div>
     </div>
-
     <div class="footer-bottom">
-      <div class="footer-bottom-inner">
-        <p>&copy; 2026 <strong>AHMAD MOBILE ACCESSORIES</strong>. All Rights Reserved. | Multan, Pakistan</p>
-        <p class="footer-sub-text">“Your one-stop shop for quality mobile accessories at affordable prices.”</p>
-      </div>
+      <p>&copy; 2024 SADIA Marketing Agency. All rights reserved. | Multan, Pakistan</p>
     </div>
   </div>
 </footer>
 
-<a href="https://wa.me/923097633492" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">💬</a>
-<button class="back-to-top" id="backToTop" aria-label="Back to Top">↑</button>
-<div class="toast-container" id="toastContainer"></div>
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/923097633492" class="whatsapp-float" target="_blank" aria-label="WhatsApp">&#128172;</a>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&#8679;</button>
 
 <script src="script.js"></script>
 </body>
