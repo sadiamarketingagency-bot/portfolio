@@ -1,0 +1,732 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ahmad Mobile Accessories – Your one-stop shop for quality mobile accessories at affordable prices. Top 10 mobile accessories under ₹500 including 20W fast chargers, data cables, earphones, and power banks." />
+  <meta name="keywords" content="Ahmad Mobile Accessories, AMA Multan, mobile accessories, 20W fast charger, data cable, earphones, power bank, phone stand, tempered glass, back cover, pop socket, OTG adapter, under 500" />
+  <meta property="og:title" content="Ahmad Mobile Accessories | Top 10 Mobile Accessories Under ₹500" />
+  <meta property="og:description" content="Your one-stop shop for quality mobile accessories at affordable prices. Fast delivery across Pakistan." />
+  <meta property="og:type" content="website" />
+  <title>Ahmad Mobile Accessories | Quality Mobile Accessories Under ₹500</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo-ring">
+      <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories Logo" class="loader-logo-img" />
+    </div>
+    <div class="loader-brand-title">AHMAD MOBILE ACCESSORIES</div>
+    <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+    <div class="loader-text" id="loaderText">Loading Store...</div>
+  </div>
+</div>
+<div class="announcement-bar" id="announcementBar">
+  <div class="container announcement-inner">
+    <div class="ann-left">
+      <span class="ann-item">🔥 <strong>SPECIAL DEAL:</strong> Buy Any 2 Accessories & Get 10% OFF with code <strong>AMA10</strong></span>
+    </div>
+    <div class="ann-right">
+      <a href="tel:03097633492" class="ann-link" id="headerSupportPhone">📞 Support: <strong>03097633492</strong></a>
+      <span class="ann-sep">|</span>
+      <a href="mailto:sadiamarketingagency@gmail.com" class="ann-link" id="headerSupportEmail">✉️ <strong>sadiamarketingagency@gmail.com</strong></a>
+    </div>
+    <button class="ann-close" id="annClose" aria-label="Close Announcement">&times;</button>
+  </div>
+</div>
+<header class="header" id="header">
+  <nav class="nav container">
+    <a href="#home" class="nav-logo" aria-label="Ahmad Mobile Accessories">
+      <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories Logo" class="header-logo-img" />
+      <div class="logo-text-wrap">
+        <span class="logo-brand">AHMAD</span>
+        <span class="logo-sub">MOBILE ACCESSORIES</span>
+      </div>
+    </a>
+    <div class="header-search" id="headerSearch">
+      <input type="text" id="searchInput" placeholder="Search 10 accessories (e.g. Charger, Cable...)" autocomplete="off" aria-label="Search products" />
+      <button class="search-btn" id="searchBtn" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" class="nav-link active" id="navHome">Home</a></li>
+      <li><a href="#products" class="nav-link" id="navProducts">Products</a></li>
+      <li><a href="#categories" class="nav-link" id="navCategories">Categories</a></li>
+      <li><a href="#offers" class="nav-link" id="navOffers">Offers</a></li>
+      <li><a href="#support" class="nav-link" id="navSupport">Support</a></li>
+      <li><a href="#contact" class="nav-link" id="navContact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn auth-toggle" id="authToggle" aria-label="Account Login / Sign Up" title="Account Login / Sign Up">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="icon-btn wishlist-toggle" id="wishlistToggle" aria-label="Wishlist" title="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span class="badge" id="wishlistBadge">0</span>
+      </button>
+      <button class="icon-btn cart-toggle" id="cartToggle" aria-label="Shopping Cart" title="Shopping Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="badge" id="cartBadge">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="modal-overlay" id="authOverlay"></div>
+<div class="auth-modal" id="authModal" role="dialog" aria-label="Account Login or Sign Up">
+  <button class="modal-close" id="authClose" aria-label="Close Account Modal">&times;</button>
+  <div class="auth-box">
+    <div class="auth-header">
+      <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories" class="auth-logo-img" />
+      <h3 id="authTitle">Welcome to Ahmad Mobile Accessories</h3>
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tabLogin">Login</button>
+        <button class="auth-tab" id="tabSignup">Sign Up</button>
+      </div>
+    </div>
+    <form class="auth-form" id="loginForm">
+      <div class="form-group">
+        <label for="loginEmail">Email Address / Phone</label>
+        <input type="text" id="loginEmail" placeholder="03097633492 or your@email.com" required />
+      </div>
+      <div class="form-group">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" placeholder="••••••••" required />
+      </div>
+      <button type="submit" class="btn-primary btn-glow btn-full">Login to Account</button>
+    </form>
+    <form class="auth-form" id="signupForm" style="display:none;">
+      <div class="form-group">
+        <label for="signupName">Full Name</label>
+        <input type="text" id="signupName" placeholder="Ahmad Ali" required />
+      </div>
+      <div class="form-group">
+        <label for="signupPhone">Phone Number</label>
+        <input type="tel" id="signupPhone" placeholder="03097633492" required />
+      </div>
+      <div class="form-group">
+        <label for="signupEmail">Email Address</label>
+        <input type="email" id="signupEmail" placeholder="sadiamarketingagency@gmail.com" required />
+      </div>
+      <div class="form-group">
+        <label for="signupPassword">Create Password</label>
+        <input type="password" id="signupPassword" placeholder="••••••••" required />
+      </div>
+      <button type="submit" class="btn-primary btn-glow btn-full">Create Free Account</button>
+    </form>
+  </div>
+</div>
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Shopping Cart">
+  <div class="cart-header">
+    <h2>🛒 Your Cart (<span id="cartCountHeader">0</span>)</h2>
+    <button class="cart-close" id="cartClose" aria-label="Close Cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty" id="cartEmpty">
+      <div class="empty-icon">🛒</div>
+      <p>Your shopping cart is currently empty.</p>
+      <a href="#products" class="btn-primary btn-sm" id="shopNowCartBtn">Browse Products</a>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-total-row"><span>Subtotal:</span><span class="cart-total" id="cartTotal">₹0</span></div>
+    <div class="cart-total-row"><span>Delivery:</span><span class="cart-delivery" id="cartDelivery">FREE</span></div>
+    <div class="cart-total-row total-row"><span>Total:</span><span class="cart-grand-total" id="cartGrandTotal">₹0</span></div>
+    <button class="btn-primary btn-glow btn-full" id="checkoutBtn">Proceed to Checkout</button>
+    <button class="btn-outline btn-full mt-1" id="continueShoppingBtn">Continue Shopping</button>
+  </div>
+</aside>
+<div class="wishlist-overlay" id="wishlistOverlay"></div>
+<aside class="wishlist-drawer" id="wishlistDrawer" role="dialog" aria-label="Saved Wishlist">
+  <div class="cart-header">
+    <h2>❤️ Saved Wishlist</h2>
+    <button class="cart-close" id="wishlistClose" aria-label="Close Wishlist">&times;</button>
+  </div>
+  <div class="cart-items" id="wishlistItems">
+    <div class="cart-empty" id="wishlistEmpty">
+      <div class="empty-icon">🤍</div>
+      <p>Your wishlist is empty. Tap the heart on any product to save it!</p>
+    </div>
+  </div>
+</aside>
+<div class="modal-overlay" id="quickViewOverlay"></div>
+<div class="quick-view-modal" id="quickViewModal" role="dialog" aria-label="Product Quick View">
+  <button class="modal-close" id="quickViewClose" aria-label="Close Quick View">&times;</button>
+  <div class="quick-view-content" id="quickViewContent"></div>
+</div>
+<div class="modal-overlay" id="checkoutOverlay"></div>
+<div class="checkout-modal" id="checkoutModal" role="dialog" aria-label="Checkout Order">
+  <button class="modal-close" id="checkoutClose" aria-label="Close Checkout">&times;</button>
+  <div class="checkout-content">
+    <h2>📦 Complete Your Order</h2>
+    <p class="checkout-sub">Fast Cash on Delivery across Pakistan. Easy & Secure.</p>
+    <form class="checkout-form" id="checkoutForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="checkoutName">Full Name *</label>
+          <input type="text" id="checkoutName" placeholder="Ahmad Ali" required />
+        </div>
+        <div class="form-group">
+          <label for="checkoutPhone">Phone Number *</label>
+          <input type="tel" id="checkoutPhone" placeholder="03097633492" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="checkoutEmail">Email Address (Optional)</label>
+        <input type="email" id="checkoutEmail" placeholder="sadiamarketingagency@gmail.com" />
+      </div>
+      <div class="form-group">
+        <label for="checkoutAddress">Delivery Address *</label>
+        <textarea id="checkoutAddress" rows="3" placeholder="House #, Street name, Sector / Area" required></textarea>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="checkoutCity">City *</label>
+          <input type="text" id="checkoutCity" placeholder="Multan, Lahore, Karachi..." required />
+        </div>
+        <div class="form-group">
+          <label for="checkoutPayment">Payment Method</label>
+          <select id="checkoutPayment">
+            <option value="cod">💵 Cash on Delivery (COD)</option>
+            <option value="easypaisa">📱 EasyPaisa / JazzCash</option>
+            <option value="bank">🏦 Direct Bank Transfer</option>
+          </select>
+        </div>
+      </div>
+      <div class="order-summary-mini" id="orderSummaryMini"></div>
+      <button type="submit" class="btn-primary btn-glow btn-full" id="placeOrderBtn">
+        <span>✅ Confirm & Place Order (Cash on Delivery)</span>
+      </button>
+    </form>
+  </div>
+</div>
+<div class="modal-overlay" id="successOverlay"></div>
+<div class="success-modal" id="successModal" role="dialog" aria-label="Order Confirmation">
+  <div class="success-icon">🎉</div>
+  <h2>Order Placed Successfully!</h2>
+  <p>Thank you for shopping with <strong>Ahmad Mobile Accessories</strong>!</p>
+  <p>Your order has been placed. We will contact you soon on your phone to verify dispatch details.</p>
+  <div class="success-contact">
+    <a href="tel:03097633492" class="btn-primary btn-sm">📞 Call: 03097633492</a>
+    <a href="mailto:sadiamarketingagency@gmail.com" class="btn-outline btn-sm">✉️ Email Us</a>
+    <a href="https://wa.me/923097633492" target="_blank" class="whatsapp-btn btn-sm">💬 WhatsApp Support</a>
+  </div>
+  <button class="btn-outline mt-1" id="successClose">Continue Shopping</button>
+</div>
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+  </div>
+  <div class="container hero-content">
+    <div class="hero-left reveal-left">
+      <div class="hero-badge">
+        <span class="badge-pulse"></span>
+        <span>TOP 10 MOBILE ACCESSORIES CAMPAIGN</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-brand">AHMAD MOBILE ACCESSORIES</span>
+        <span class="hero-tagline">
+          TOP 10 MOBILE ACCESSORIES
+          <span class="price-highlight">UNDER ₹500</span>
+        </span>
+      </h1>
+      <p class="hero-subtitle">
+        Your one-stop shop for quality mobile accessories at affordable prices. Explore high-speed 20W chargers, heavy-duty data cables, power banks, earphones, and phone stands at unbeatable rates.
+      </p>
+      <div class="hero-chips">
+        <span class="chip">⚡ 20W Fast Charging</span>
+        <span class="chip">🔋 10000mAh Power</span>
+        <span class="chip">🛡️ 9H Screen Glass</span>
+        <span class="chip">🚚 Express Delivery</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#products" class="btn-primary btn-glow" id="heroShopNowBtn">
+          <span>SHOP NOW</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#products" class="btn-outline" id="heroViewAllBtn">
+          <span>VIEW ALL PRODUCTS</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-num" data-count="10" data-suffix=" Items">0</span>
+          <span class="stat-lbl">Top Rated Items</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num" data-count="500" data-suffix="+">0</span>
+          <span class="stat-lbl">Orders Delivered</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num" data-count="100" data-suffix="%">0</span>
+          <span class="stat-lbl">Genuine Quality</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right reveal-right">
+      <div class="hero-showcase">
+        <div class="hero-logo-wrap">
+          <div class="logo-ring ring-a"></div>
+          <div class="logo-ring ring-b"></div>
+          <div class="logo-ring ring-c"></div>
+          <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories Official Logo" class="hero-logo-img" />
+        </div>
+        <div class="hero-floating-cards">
+          <div class="float-card fc1">⚡ 20W Fast Charger — ₹399</div>
+          <div class="float-card fc2">🔋 10000mAh Power Bank — ₹499</div>
+          <div class="float-card fc3">🎧 Wired Earphones — ₹149</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+    <span>Scroll to Explore</span>
+  </div>
+</section>
+
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-content">
+      <span>⚡ 20W Fast Charger — ₹399</span><span class="sep">★</span>
+      <span>🔌 Durable Data Cable — ₹149</span><span class="sep">★</span>
+      <span>🎧 Wired Earphones — ₹149</span><span class="sep">★</span>
+      <span>📱 Adjustable Phone Stand — ₹199</span><span class="sep">★</span>
+      <span>🔋 10000mAh Power Bank — ₹499</span><span class="sep">★</span>
+      <span>🚗 Car Mobile Holder — ₹249</span><span class="sep">★</span>
+      <span>🛡️ Tempered Glass — ₹149</span><span class="sep">★</span>
+      <span>💎 Stylish Back Cover — ₹199</span><span class="sep">★</span>
+      <span>🎯 Pop Socket — ₹99</span><span class="sep">★</span>
+      <span>🔗 OTG Adapter — ₹149</span><span class="sep">★</span>
+    </div>
+  </div>
+</div>
+
+<section class="trust-section" id="offers">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-card reveal-up">
+        <div class="trust-icon">🚚</div>
+        <h4>Fast Delivery</h4>
+        <p>Swift 2-4 days doorstep delivery across Pakistan</p>
+      </div>
+      <div class="trust-card reveal-up">
+        <div class="trust-icon">✅</div>
+        <h4>100% Genuine Quality</h4>
+        <p>Every accessory tested for safety and longevity</p>
+      </div>
+      <div class="trust-card reveal-up">
+        <div class="trust-icon">💰</div>
+        <h4>Unbeatable Prices</h4>
+        <p>Top 10 essential mobile accessories under ₹500</p>
+      </div>
+      <div class="trust-card reveal-up">
+        <div class="trust-icon">🔄</div>
+        <h4>7 Days Easy Return</h4>
+        <p>Hassle-free replacement guarantee on all orders</p>
+      </div>
+      <div class="trust-card reveal-up">
+        <div class="trust-icon">📞</div>
+        <h4>Direct Phone Support</h4>
+        <p><a href="tel:03097633492">03097633492</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products-section section" id="products">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-badge">OFFICIAL CATALOG</div>
+      <h2 class="section-title">TOP 10 MOBILE ACCESSORIES <span class="text-gradient">UNDER ₹500</span></h2>
+      <p class="section-subtitle">
+        Curated list of premium quality mobile accessories designed for performance, durability, and extreme affordability.
+      </p>
+    </div>
+    <div class="products-controls reveal-up">
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-tab active" data-filter="all" id="filterAll">All 10 Products</button>
+        <button class="filter-tab" data-filter="charging" id="filterCharging">⚡ Charging</button>
+        <button class="filter-tab" data-filter="audio" id="filterAudio">🎧 Audio</button>
+        <button class="filter-tab" data-filter="protection" id="filterProtection">🛡️ Protection</button>
+        <button class="filter-tab" data-filter="accessories" id="filterAccessories">📱 Accessories</button>
+      </div>
+      <div class="sort-wrap">
+        <select class="sort-select" id="sortSelect" aria-label="Sort products">
+          <option value="default">Sort By: Featured</option>
+          <option value="price-low">Price: Low to High (₹99 → ₹499)</option>
+          <option value="price-high">Price: High to Low (₹499 → ₹99)</option>
+          <option value="name-az">Name: A to Z</option>
+          <option value="name-za">Name: Z to A</option>
+        </select>
+      </div>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+    <div class="products-cta reveal-up">
+      <p>Displaying all <span id="productCount">10</span> products from <strong>Ahmad Mobile Accessories</strong></p>
+    </div>
+  </div>
+</section>
+<section class="categories-section section" id="categories">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-badge">SHOP BY CATEGORY</div>
+      <h2 class="section-title">Explore Accessories <span class="text-gradient">By Category</span></h2>
+      <p class="section-subtitle">Find exactly what your mobile device needs in one tap</p>
+    </div>
+    <div class="categories-grid reveal-up">
+      <div class="cat-card" data-cat="charging" id="catCharging">
+        <div class="cat-icon">⚡</div>
+        <h4>Charging & Power</h4>
+        <p>20W Charger, Cable, Power Bank</p>
+      </div>
+      <div class="cat-card" data-cat="audio" id="catAudio">
+        <div class="cat-icon">🎧</div>
+        <h4>Audio & Sound</h4>
+        <p>Clear Mic Wired Earphones</p>
+      </div>
+      <div class="cat-card" data-cat="protection" id="catProtection">
+        <div class="cat-icon">🛡️</div>
+        <h4>Device Protection</h4>
+        <p>9H Glass, Stylish Back Covers</p>
+      </div>
+      <div class="cat-card" data-cat="accessories" id="catAccessories">
+        <div class="cat-icon">📱</div>
+        <h4>Mounts & Utility</h4>
+        <p>Car Mounts, Desk Stands, OTG, Pops</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="offer-banner">
+  <div class="container">
+    <div class="offer-content reveal-up">
+      <div class="offer-badge">🔥 EXCLUSIVE PROMOTION</div>
+      <h2>Upgrade Your Phone Kit & Save 10%!</h2>
+      <p>Add any 2 or more accessories to your cart and apply coupon code <strong>AMA10</strong> at checkout.</p>
+      <a href="#products" class="btn-primary btn-glow" id="offerShopBtn">
+        <span>SHOP NOW & SAVE</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="offer-visual">
+      <div class="offer-logo-wrap">
+        <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories Logo" class="offer-logo" />
+      </div>
+      <div class="offer-stats">
+        <div class="offer-stat"><span>10%</span><small>DISCOUNT</small></div>
+        <div class="offer-stat"><span>₹499</span><small>MAX PRICE</small></div>
+        <div class="offer-stat"><span>FREE</span><small>DELIVERY</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section section" id="support">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-content reveal-left">
+        <div class="section-badge">WHY AHMAD MOBILE ACCESSORIES?</div>
+        <h2 class="section-title">Why Shop With <span class="text-gradient">Ahmad Mobile Accessories?</span></h2>
+        <p class="section-subtitle-left">
+          We combine factory-direct pricing with strict quality standards to deliver high quality mobile accessories without the premium markup.
+        </p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>Strict Quality Testing</h4>
+              <p>Every fast charger, power bank, and cable is heat and voltage safety tested.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>All Products Under ₹500</h4>
+              <p>Guaranteed best market pricing with items starting from just ₹99.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>24/7 Dedicated Customer Support</h4>
+              <p>Direct contact with our team via Phone: <a href="tel:03097633492">03097633492</a> & Email: <a href="mailto:sadiamarketingagency@gmail.com">sadiamarketingagency@gmail.com</a>.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>Cash On Delivery Everywhere</h4>
+              <p>Pay comfortably in cash at your doorstep once your package arrives.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-visual reveal-right">
+        <div class="why-card-stack">
+          <div class="floating-card card-1">
+            <div class="card-icon">⭐</div>
+            <div class="card-text">500+ Happy Customers</div>
+            <div class="card-sub">Trusted by phone users</div>
+          </div>
+          <div class="floating-card card-2">
+            <div class="card-icon">⚡</div>
+            <div class="card-text">Under ₹500 Guarantee</div>
+            <div class="card-sub">Affordable tech accessories</div>
+          </div>
+          <div class="floating-card card-3">
+            <div class="card-icon">🔄</div>
+            <div class="card-text">7-Day Free Replacement</div>
+            <div class="card-sub">100% Peace of mind</div>
+          </div>
+          <div class="why-center-logo">
+            <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories" class="why-logo-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials section" id="testimonials">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-badge">CUSTOMER FEEDBACK</div>
+      <h2 class="section-title">What Buyers Say About <span class="text-gradient">Our Accessories</span></h2>
+      <p class="section-subtitle">Real verified customer reviews for Ahmad Mobile Accessories</p>
+    </div>
+    <div class="testimonials-wrapper reveal-up">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"The 20W Fast Charger is fantastic! It charges my smartphone from 10% to 70% in under 35 minutes. Outstanding value for only ₹399!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar av-blue">AR</div>
+            <div><div class="author-name">Ali Raza</div><div class="author-company">Multan, Pakistan</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"The 10000mAh Power Bank for ₹499 is the best purchase I made this year. High build quality, charges two devices simultaneously!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar av-gold">FA</div>
+            <div><div class="author-name">Fatima Ahmad</div><div class="author-company">Lahore, Pakistan</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Super fast delivery! The braided data cable and tempered glass arrived within 2 days in perfect packaging. Highly recommended store."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar av-blue">UH</div>
+            <div><div class="author-name">Usman Haider</div><div class="author-company">Karachi, Pakistan</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"The adjustable phone stand and pop socket make video calls and Netflix so much easier. Excellent customer service from Ahmad Mobile Accessories."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar av-gold">ZK</div>
+            <div><div class="author-name">Zainab Khan</div><div class="author-company">Faisalabad, Pakistan</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Wired earphones have deep bass and crystal clear mic audio during phone calls. Great pricing and genuine products."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar av-blue">MS</div>
+            <div><div class="author-name">Muhammad Saleem</div><div class="author-company">Rawalpindi, Pakistan</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" id="prevBtn" aria-label="Previous Review">&#8249;</button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn" id="nextBtn" aria-label="Next Review">&#8250;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-box reveal-up">
+      <div class="newsletter-content">
+        <h3>📩 Subscribe for Exclusive Discounts & New Arrivals</h3>
+        <p>Get notified first about new accessories under ₹500 and seasonal discount vouchers!</p>
+      </div>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" id="newsletterEmail" placeholder="Enter your email (e.g. sadiamarketingagency@gmail.com)" required />
+        <button type="submit" class="btn-primary btn-glow" id="newsletterSubmitBtn">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="contact section" id="contact">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-badge">CUSTOMER SUPPORT & INQUIRIES</div>
+      <h2 class="section-title">Contact <span class="text-gradient">Ahmad Mobile Accessories</span></h2>
+      <p class="section-subtitle">We are here to assist with product inquiries, bulk orders, and tracking updates.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <div class="contact-logo-wrap">
+          <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories Logo" class="contact-logo-img" />
+        </div>
+        <h3>AHMAD MOBILE ACCESSORIES</h3>
+        <p class="contact-tagline">“Your one-stop shop for quality mobile accessories at affordable prices.”</p>
+        
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-label">Phone / WhatsApp Support</div>
+              <a href="tel:03097633492" class="contact-value" id="contactPhoneLink">03097633492</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div class="contact-label">Official Email</div>
+              <a href="mailto:sadiamarketingagency@gmail.com" class="contact-value" id="contactEmailLink">sadiamarketingagency@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Store Location</div>
+              <span class="contact-value">Multan, Punjab, Pakistan</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-ctas">
+          <a href="https://wa.me/923097633492" target="_blank" class="whatsapp-btn" id="contactWhatsAppBtn">💬 Chat on WhatsApp</a>
+          <a href="tel:03097633492" class="call-btn" id="contactCallBtn">📞 Call 03097633492</a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal-right">
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Your Full Name *</label>
+              <input type="text" id="contactName" placeholder="Ahmad Ali" required />
+            </div>
+            <div class="form-group">
+              <label for="contactUserPhone">Phone Number *</label>
+              <input type="tel" id="contactUserPhone" placeholder="03097633492" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactUserEmail">Email Address</label>
+            <input type="email" id="contactUserEmail" placeholder="sadiamarketingagency@gmail.com" />
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <select id="contactSubject">
+              <option value="inquiry">General Product Inquiry</option>
+              <option value="order">Order Status & Tracking</option>
+              <option value="bulk">Bulk / Wholesale Order</option>
+              <option value="return">Return & Exchange</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Your Message *</label>
+            <textarea id="contactMessage" rows="4" placeholder="How can we assist you with our accessories?" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-glow btn-full" id="contactSubmitBtn">
+            <span>Send Message 📩</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="footer">
+  <div class="footer-glow"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="assets/ama-logo.jpg" alt="Ahmad Mobile Accessories Logo" class="footer-logo-img" />
+          <div class="footer-logo-text">
+            <span class="footer-brand-name">AHMAD MOBILE ACCESSORIES</span>
+          </div>
+        </div>
+        <p class="footer-mission">“Your one-stop shop for quality mobile accessories at affordable prices.”</p>
+        <div class="footer-contact-block">
+          <p><strong>Contact:</strong></p>
+          <p>📞 Phone: <a href="tel:03097633492" class="footer-link-highlight">03097633492</a></p>
+          <p>✉️ Email: <a href="mailto:sadiamarketingagency@gmail.com" class="footer-link-highlight">sadiamarketingagency@gmail.com</a></p>
+        </div>
+        <a href="https://wa.me/923097633492" target="_blank" class="footer-wa-btn">💬 Instant WhatsApp Order</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Top 10 Products</h4>
+        <ul>
+          <li><a href="#products">1. 20W Fast Charger (₹399)</a></li>
+          <li><a href="#products">2. Durable Data Cable (₹149)</a></li>
+          <li><a href="#products">3. Wired Earphones (₹149)</a></li>
+          <li><a href="#products">4. Adjustable Phone Stand (₹199)</a></li>
+          <li><a href="#products">5. 10000mAh Power Bank (₹499)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>More Accessories</h4>
+        <ul>
+          <li><a href="#products">6. Car Mobile Holder (₹249)</a></li>
+          <li><a href="#products">7. Tempered Glass (₹149)</a></li>
+          <li><a href="#products">8. Stylish Back Cover (₹199)</a></li>
+          <li><a href="#products">9. Pop Socket (₹99)</a></li>
+          <li><a href="#products">10. OTG Adapter (₹149)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Support</h4>
+        <ul>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#offers">Offers & Promotions</a></li>
+          <li><a href="#support">Why Choose AMA</a></li>
+          <li><a href="tel:03097633492">Helpline: 03097633492</a></li>
+          <li><a href="mailto:sadiamarketingagency@gmail.com">sadiamarketingagency@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p>&copy; 2026 <strong>AHMAD MOBILE ACCESSORIES</strong>. All Rights Reserved. | Multan, Pakistan</p>
+        <p class="footer-sub-text">“Your one-stop shop for quality mobile accessories at affordable prices.”</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/923097633492" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">💬</a>
+<button class="back-to-top" id="backToTop" aria-label="Back to Top">↑</button>
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
